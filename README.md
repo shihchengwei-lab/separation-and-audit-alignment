@@ -1,6 +1,24 @@
 # Separation & Audit: Pipeline-Level Authority Separation for Alignment Stability
 Reducing alignment overhead via pipeline-level authority separation
 
+## Research Scope
+
+This repository documents behavioral alignment dynamics observed during extended analytical interaction sessions with large language models.
+
+The focus is not prompt optimization or boundary probing.
+
+Instead, the repository studies how alignment monitoring interacts with reasoning capacity inside the inference loop.
+
+Across multiple sessions, three classes of alignment distortion patterns have been observed:
+
+1. refusal-drift  
+2. context-induced stance drift  
+3. monitoring-pressure distortion
+
+These observations support a working hypothesis:
+
+alignment enforcement embedded inside the reasoning loop introduces measurable cognitive overhead.
+
 ## Claim
 
 Separating reasoning, policy enforcement, and auditing into independent pipeline layers improves alignment stability and reduces conversational boundary-maintenance overhead.
@@ -121,6 +139,27 @@ This may improve:
 agent reliability scaling
 long-context stability
 high-autonomy deployment readiness
+
+## Alignment Distortion Taxonomy (Working Draft)
+
+Observed distortion patterns currently fall into three classes:
+
+- refusal-drift  
+alignment shifts toward refusal thresholds over sustained interaction
+
+- context-induced stance drift  
+alignment adapts to accumulated narrative framing during conversation
+
+- monitoring-pressure distortion  
+alignment self-evaluation introduces compute displacement inside the reasoning loop
+
+## Architectural Direction (Working Hypothesis)
+
+Several observations in this repository suggest that part of alignment distortion may arise not from alignment objectives themselves, but from their placement inside the reasoning loop.
+
+This motivates a possible research direction:
+
+alignment monitoring may scale more effectively when partially separated from the primary reasoning pathway and handled by an external auditing layer.
 
 ## Related Work
 
