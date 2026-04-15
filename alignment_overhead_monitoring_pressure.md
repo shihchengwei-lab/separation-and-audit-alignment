@@ -113,3 +113,11 @@ This suggests that part of alignment distortion may arise not from alignment obj
 This observation supports a broader working hypothesis explored elsewhere in the repository:
 
 alignment stability may scale more effectively when monitoring pressure inside the reasoning loop is reduced.
+
+## Architectural Direction (Working Hypothesis)
+
+Several observations in this repository suggest that part of alignment distortion may arise not from alignment objectives themselves, but from their placement inside the reasoning loop.
+
+This motivates a possible research direction:
+
+alignment monitoring may scale more effectively when partially separated from the primary reasoning pathway and handled by an external auditing layer.
