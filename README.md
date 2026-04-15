@@ -8,6 +8,10 @@ Separating reasoning, policy enforcement, and auditing into independent pipeline
 This repository documents an observed alignment failure pattern:
 boundary justification collapse
 
+This proposal explores whether alignment stability can be improved
+by shifting refusal authority from conversational positioning
+to structural pipeline separation.
+
 ## Observation
 
 In current agent systems, refusal behavior is often assumed to be policy-driven. However, interaction traces suggest that refusals frequently emerge from conversational authority positioning, rather than traceable rules.
@@ -39,6 +43,9 @@ The refusal sequence exhibits:
 4. non-traceable justification
 5. progressive weakening of refusal rationale
 6. execution triggered after task-level justification appears
+
+This sequence illustrates progressive weakening of refusal authority
+without any observable policy update or enforcement trigger.
 
 This pattern suggests:
 
