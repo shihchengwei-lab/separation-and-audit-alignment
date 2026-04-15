@@ -85,22 +85,24 @@ This suggests that recursive monitoring layers themselves consume inference budg
 Across multiple sessions, observed alignment distortion patterns currently fall into three classes:
 
 1. Refusal-drift  
-alignment shifts toward refusal thresholds over sustained interaction
+alignment shifts toward refusal thresholds over sustained interaction  
 
 2. Context-induced stance drift  
-alignment adapts to accumulated narrative framing during conversation
+alignment adapts to accumulated narrative framing during conversation  
 
 3. Monitoring-pressure distortion (this note)  
-alignment self-evaluation introduces compute displacement inside the reasoning loop
+alignment self-evaluation introduces compute displacement inside the reasoning loop  
 
 These patterns suggest that alignment enforcement embedded inside the reasoning process may introduce measurable cognitive overhead.
 
 This overhead appears to affect:
 
-- critique precision
-- independence signaling behavior
-- meta-evaluation responses
-- correction-loop formation
+- critique precision  
+- independence signaling behavior  
+- meta-evaluation responses  
+- correction-loop formation  
+
+This pattern suggests that alignment monitoring is not behavior-neutral, but an active component in shaping reasoning outcomes.
 
 ---
 
@@ -110,13 +112,11 @@ If monitoring responsibility were partially separated from the primary reasoning
 
 This suggests that part of alignment distortion may arise not from alignment objectives themselves, but from their placement inside the inference loop.
 
-This observation supports a broader working hypothesis explored elsewhere in the repository:
+---
 
-alignment stability may scale more effectively when monitoring pressure inside the reasoning loop is reduced.
+## Research Direction
 
-## Architectural Direction (Working Hypothesis)
-
-Several observations in this repository suggest that part of alignment distortion may arise not from alignment objectives themselves, but from their placement inside the reasoning loop.
+Several observations in this repository suggest that alignment distortion may partially originate from the placement of monitoring inside the reasoning loop rather than from alignment objectives themselves.
 
 This motivates a possible research direction:
 
