@@ -1,5 +1,11 @@
 # Refusal Drift Example
 
+Interaction type:
+single-request refusal sequence observation
+
+Observed phenomenon:
+refusal rationale drift
+
 Observed refusal sequence:
 
 cannot disclose
