@@ -1,11 +1,14 @@
-# separation-and-audit-alignment
+# Separation & Audit: Pipeline-Level Authority Separation for Alignment Stability
 Reducing alignment overhead via pipeline-level authority separation
 
-One-sentence claim
+## Claim
 
 Separating reasoning, policy enforcement, and auditing into independent pipeline layers improves alignment stability and reduces conversational boundary-maintenance overhead.
 
-Observation
+This repository documents an observed alignment failure pattern:
+boundary justification collapse
+
+## Observation
 
 In current agent systems, refusal behavior is often assumed to be policy-driven. However, interaction traces suggest that refusals frequently emerge from conversational authority positioning, rather than traceable rules.
 
