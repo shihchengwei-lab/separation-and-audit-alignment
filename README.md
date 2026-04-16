@@ -19,6 +19,20 @@ These observations support a working hypothesis:
 
 alignment enforcement embedded inside the reasoning loop introduces measurable cognitive overhead.
 
+## Positioning: A Fourth Path
+
+Most current alignment strategies differ in method, but share a common structural assumption: capability and safety must be managed inside the same primary reasoning loop.
+
+One response is to increase model capability and rely on downstream safeguards. Another is to strengthen safety inside the model through training-time alignment or prompt-level behavioral control. A third is to add auxiliary tools, classifiers, or helper agents around the model, while still leaving the main reasoning process responsible for carrying safety pressure in real time.
+
+This repository explores a fourth path.
+
+The core hypothesis is that part of the observed capability-safety tradeoff is architectural rather than fundamental. When reasoning, policy enforcement, and self-monitoring are forced to coexist inside the same inference loop, alignment maintenance can consume reasoning bandwidth and introduce distortion.
+
+Instead of asking a single model to reason, self-monitor, and maintain refusal authority at once, this approach investigates whether those roles should be separated into distinct pipeline layers.
+
+In this framing, alignment becomes less a conversational property of a single model and more an architectural property of the overall system.
+
 ## Claim
 
 Separating reasoning, policy enforcement, and auditing into independent pipeline layers improves alignment stability and reduces conversational boundary-maintenance overhead.
