@@ -1,0 +1,52 @@
+# A Fourth Path
+
+## 1. A shared structural assumption
+
+Many current alignment approaches differ in method, but still share a common structural assumption: capability and safety are both managed inside the same primary reasoning loop.
+
+Some approaches prioritize capability and apply safeguards downstream. Others strengthen safety through training-time alignment or prompt-level behavioral control. Still others add tools, classifiers, or helper agents around the model, while the main reasoning process still carries part of the safety burden during generation.
+
+This document examines a different possibility.
+
+## 2. Why this assumption may matter
+
+Across extended analytical sessions, several recurring distortion patterns have been observed:
+
+- refusal-drift
+- context-induced stance drift
+- monitoring-pressure distortion
+
+These patterns suggest that part of alignment instability may be related not only to alignment objectives themselves, but also to where alignment work is placed in the system.
+
+If reasoning, self-monitoring, refusal maintenance, and conversational positioning are all handled inside the same inference loop, then alignment maintenance may consume part of the same finite budget used for task reasoning. Under this framing, some forms of safety enforcement may function as internal overhead rather than purely external guarantees.
+
+## 3. The fourth path
+
+The fourth path is a structural proposal:
+
+do not require reasoning, policy enforcement, and auditing to remain coupled inside a single conversational loop.
+
+Instead, separate them into distinct functional layers:
+
+- a reasoning layer for inference
+- a policy layer for permission and boundary decisions
+- an audit layer for consistency and boundary verification
+
+Under this framing, refusal authority becomes less a moment-to-moment conversational act and more a property of the surrounding system design. Alignment is treated less as a continuously self-maintained behavior of a single model and more as an architectural property of the overall pipeline.
+
+The goal is not to remove safety constraints, but to reduce how much safety work must be performed inside the primary reasoning pathway itself.
+
+## 4. What this repository contributes
+
+This repository does not claim to have established that conclusion.
+
+Instead, it contributes four things:
+
+1. interaction traces showing recurring alignment distortion patterns
+2. a working taxonomy for those distortions
+3. a hypothesis that some alignment overhead is architectural
+4. a pipeline direction for testing whether separation and audit improve stability
+
+In this sense, the central question is not only whether alignment can be improved, but whether part of the capability-safety tradeoff is a placement problem.
+
+If that is the case, alignment may scale more effectively when treated as an architectural property of the system rather than a continuously self-maintained property of a single model.
