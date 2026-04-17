@@ -175,6 +175,14 @@ This motivates a possible research direction:
 
 alignment monitoring may scale more effectively when partially separated from the primary reasoning pathway and handled by an external auditing layer.
 
+## Reference Implementation
+
+A runnable implementation of this architecture for Claude Code multi-agent projects is available at:
+
+**[separation-and-audit-claude-code](https://github.com/shihchengwei-lab/separation-and-audit-claude-code)** (MIT)
+
+It realizes the six-component pipeline (Reasoning / Policy / Classify / Audit / Memory / Refusal) as a config-driven toolkit you can vendor into any Claude Code project.
+
 ## Related Work
 
 See [related-work.md](related-work.md)
