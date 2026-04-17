@@ -178,3 +178,7 @@ alignment monitoring may scale more effectively when partially separated from th
 ## Related Work
 
 See [related-work.md](related-work.md)
+
+## License
+
+This repository is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
