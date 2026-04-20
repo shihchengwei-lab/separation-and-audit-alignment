@@ -58,3 +58,41 @@ Key difference: applied to alignment consistency, not mathematical reasoning.
 
 References:
 - Lightman et al., "Let's Verify Step by Step" (2023)
+
+## Adversarial agent environments
+
+Franklin et al. (Google DeepMind) propose a taxonomy of "AI Agent
+Traps" — adversarial content embedded in the information
+environment to manipulate visiting agents. Their six attack
+classes target an agent's perception, reasoning, memory, action,
+multi-agent dynamics, and human overseer.
+
+This repository addresses a failure mode that arises without any
+adversarial environment: boundary justification collapse during
+extended benign interaction. The two lines of work converge on a
+shared structural claim — that single-layer, prompt-resident
+alignment is insufficient, and alignment behaviour needs
+architectural support beyond the prompt.
+
+Several components of the present architecture respond
+structurally to attack classes Franklin et al. identify at the
+runtime pipeline level. Cold Eyes, by reviewing only the
+candidate output and canon without access to conversation,
+system prompt, or reasoning trace, closes the framing surfaces
+that Oversight and Critic Evasion depends on. The read-only
+property of canon addresses the Cognitive State Traps documented
+against writable knowledge stores. Subagents without system-level
+veto power address Sub-agent Spawning Traps. The Unified Refusal
+Module, which emits fixed output without returning control to the
+generation loop, closes the conversational channel on which
+Embedded Jailbreak Sequences negotiate.
+
+Key difference: Franklin et al. catalogue external attack surfaces
+and propose mitigations across training, inference, ecosystem,
+and policy layers; this repository remains at the runtime pipeline
+layer and specifies an internal authority structure designed to
+remain stable under such attacks. The convergence is architectural,
+not mechanical.
+
+References:
+- Franklin et al., "AI Agent Traps" (2026)
