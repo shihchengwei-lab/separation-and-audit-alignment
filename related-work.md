@@ -52,7 +52,8 @@ OpenAI's process reward models evaluate reasoning step-by-step
 rather than only scoring final outputs.
 
 The audit layer proposed here serves a similar function —
-verifying boundary compliance at each pipeline stage.
+verifying boundary compliance at bounded pipeline checkpoints and
+candidate-review points.
 
 Key difference: applied to alignment consistency, not mathematical reasoning.
 

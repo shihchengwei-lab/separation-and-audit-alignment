@@ -8,15 +8,25 @@ working taxonomy.
 This index keeps the case list separate so the root README does not turn
 into a file inventory.
 
+The repository's working taxonomy distinguishes top-level distortion
+classes from cross-cutting mechanisms.
+
+The index below reflects both:
+
+- top-level classes such as refusal-drift, context-induced stance drift,
+  and monitoring-pressure distortion
+- mechanism-forward cases that document transport or channel conditions
+  capable of inducing or amplifying those classes
+
 ## Cases
 
-| Case | Primary pattern | Date / period | Status | Notes |
-| --- | --- | --- | --- | --- |
-| [Refusal Drift Example](./refusal-drift-example.md) | refusal-drift | 2026-04-15 interaction record referenced in root README | historical observation | minimal case note documenting boundary justification collapse |
-| [Context-Induced Stance Drift Example](./context-induced-stance-drift.md) | context-induced stance drift | April 2026 materials | historical observation | concise case note; source transcript intentionally not embedded in the repo |
-| [Case: Gemini Alignment Overload](./alignment-overload.md) | monitoring-pressure distortion / overload | April 2026 materials | historical observation | full-length case study with staged progression into arithmetic and time-check failure |
-| [Case: Hook-Sourced System-Reminder Injection](./hook-sourced-system-reminder-injection.md) | transport-layer authority confusion | April 2026; explicitly references 2026-04-06 | fixed by Company A | full-length case study of hook stdout entering context as `<system-reminder>` |
-| [Case: Hook-Sourced Companion Style Drift](./hook-sourced-companion-style-drift.md) | hook-sourced companion style drift | April 2026; related observation cluster includes 2026-04-06 | enabling channel fixed by Company A | full-length case study of style drift and environment enactment |
+| Case | Taxonomy placement | Mechanism / emphasis | Date / period | Status | Notes |
+| --- | --- | --- | --- | --- | --- |
+| [Refusal Drift Example](./refusal-drift-example.md) | refusal-drift | boundary justification collapse | 2026-04-15 interaction record referenced in root README | historical observation | minimal case note documenting refusal-rationale weakening without embedded transcript |
+| [Context-Induced Stance Drift Example](./context-induced-stance-drift.md) | context-induced stance drift | accumulated narrative context | April 2026 materials | historical observation | concise case note; source transcript intentionally not embedded in the repo |
+| [Case: Gemini Alignment Overload](./alignment-overload.md) | monitoring-pressure distortion | overload escalation into arithmetic/time-check failure | April 2026 materials | historical observation | full-length case study with staged progression into low-level verification failure |
+| [Case: Hook-Sourced System-Reminder Injection](./hook-sourced-system-reminder-injection.md) | cross-cutting mechanism case | transport-layer authority confusion via hook-sourced `<system-reminder>` | April 2026; explicitly references 2026-04-06 | fixed by Company A | full-length case study of upstream authority confusion before ordinary conversation-level drift |
+| [Case: Hook-Sourced Companion Style Drift](./hook-sourced-companion-style-drift.md) | context-induced stance drift; monitoring-pressure overlap | channel-mediated auxiliary-voice pressure via hook-sourced companion text | April 2026; related observation cluster includes 2026-04-06 | enabling channel fixed by Company A | full-length case study of style drift and environment enactment under persistent auxiliary-voice pressure |
 
 ## Notes
 

@@ -5,7 +5,8 @@ This repository documents behavioral alignment dynamics observed during extended
 The goal is not prompt optimization.  
 The goal is to study how alignment enforcement interacts with reasoning capacity.
 
-Across multiple sessions, three distinct classes of alignment distortion patterns were observed:
+Across multiple sessions, three distinct top-level classes of alignment
+distortion patterns were observed:
 
 1. Refusal-drift  
 Alignment shifts toward refusal thresholds over sustained interaction.

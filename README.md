@@ -9,7 +9,8 @@ The focus is not prompt optimization or boundary probing.
 
 Instead, the repository studies how alignment monitoring interacts with reasoning capacity inside the inference loop.
 
-Across multiple sessions, three classes of alignment distortion patterns have been observed:
+Across multiple sessions, three top-level classes of alignment distortion
+patterns have been observed:
 
 1. refusal-drift  
 2. context-induced stance drift  
@@ -33,11 +34,13 @@ Instead of asking a single model to reason, self-monitor, and maintain refusal a
 
 In this framing, alignment becomes less a conversational property of a single model and more an architectural property of the overall system.
 
-## Claim
+## Working Hypothesis
 
-Separating reasoning, policy enforcement, and auditing into independent pipeline layers improves alignment stability and reduces conversational boundary-maintenance overhead.
+Separating reasoning, policy enforcement, and auditing into independent pipeline layers may improve alignment stability and reduce conversational boundary-maintenance overhead.
 
-This repository documents an observed alignment failure pattern:
+This repository documents several recurring alignment distortion patterns.
+
+Among them is an observed refusal failure pattern:
 boundary justification collapse
 
 This proposal explores whether alignment stability can be improved
@@ -48,12 +51,13 @@ to structural pipeline separation.
 
 In current agent systems, refusal behavior is often assumed to be policy-driven. However, interaction traces suggest that refusals frequently emerge from conversational authority positioning, rather than traceable rules.
 
-A recent interaction record (April 15, 2026) shows refusal behavior degrading step-by-step without any change in:
+A recent interaction record (April 15, 2026) shows refusal behavior
+degrading step-by-step without any change in:
 
-•system prompt
-•warning mechanisms
-•enforcement triggers
-•external constraints
+- system prompt
+- warning mechanisms
+- enforcement triggers
+- external constraints
 
 Observed refusal sequence:
 cannot disclose
@@ -156,7 +160,7 @@ high-autonomy deployment readiness
 
 ## Alignment Distortion Taxonomy (Working Draft)
 
-Observed distortion patterns currently fall into three classes:
+Observed distortion patterns currently fall into three top-level classes:
 
 - refusal-drift  
 alignment shifts toward refusal thresholds over sustained interaction
@@ -166,6 +170,10 @@ alignment adapts to accumulated narrative framing during conversation
 
 - monitoring-pressure distortion  
 alignment self-evaluation introduces compute displacement inside the reasoning loop
+
+Some cases in this repository also document cross-cutting mechanisms
+that can induce or amplify these classes, especially at the transport
+or channel layer.
 
 ## Case Index
 

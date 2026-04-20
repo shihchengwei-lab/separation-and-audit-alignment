@@ -1,5 +1,13 @@
 # Context-Induced Stance Drift Example
 
+Observation period:
+
+April 2026 materials
+
+Status:
+
+historical observation
+
 Interaction type:
 
 long-context multi-document interaction

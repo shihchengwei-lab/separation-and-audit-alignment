@@ -82,7 +82,8 @@ This suggests that recursive monitoring layers themselves consume inference budg
 
 ## Structural Interpretation
 
-Across multiple sessions, observed alignment distortion patterns currently fall into three classes:
+Across multiple sessions, observed alignment distortion patterns
+currently fall into three top-level classes:
 
 1. Refusal-drift  
 alignment shifts toward refusal thresholds over sustained interaction  
