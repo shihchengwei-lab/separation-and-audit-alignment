@@ -187,6 +187,11 @@ It realizes the six-component pipeline (Reasoning / Policy / Classify / Audit / 
 
 See [related-work.md](related-work.md)
 
+## Frontier Lab Context
+
+See [frontier-lab-context.md](./frontier-lab-context.md) for publicly 
+documented alignment placements at Anthropic, OpenAI, and Google DeepMind.
+
 ## License
 
 This repository is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
