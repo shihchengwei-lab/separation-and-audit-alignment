@@ -167,6 +167,10 @@ alignment adapts to accumulated narrative framing during conversation
 - monitoring-pressure distortion  
 alignment self-evaluation introduces compute displacement inside the reasoning loop
 
+## Case Index
+
+See [cases/README.md](./cases/README.md) for the organized case index.
+
 ## Architectural Direction (Working Hypothesis)
 
 Several observations in this repository suggest that part of alignment distortion may arise not from alignment objectives themselves, but from their placement inside the reasoning loop.
