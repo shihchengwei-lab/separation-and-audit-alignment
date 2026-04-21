@@ -46,6 +46,17 @@ Key difference: runtime architecture, not training methodology.
 References:
 - Bai et al., "Constitutional AI: Harmlessness from AI Feedback" (2022)
 
+Safety tax and runtime enforcement cost
+Huang, Liu, and colleagues document the Safety Tax — the tension between safety alignment and reasoning capability, analysed primarily at training time and through the lens of capability degradation after safety fine-tuning.
+This repository's observations extend the same tension to the runtime layer. When enforcement rules are colocated with the reasoning process inside a single agent's context, the two compete for the same inference budget. The refusal-drift and alignment-dynamics cases document this competition directly: sustained reasoning pressure erodes boundary stability, and explicit monitoring prompts distort output quality.
+The architectural response in this repository — zero-prohibition primary agent, domain-distributed sub-agents, and a stateless canon gate — treats the trade-off as an artifact of colocation rather than an inherent property. Separating enforcement from the reasoning loop removes the budget competition that the Safety Tax framework describes.
+Key difference: Huang et al. characterise the cost; this repository proposes that the cost is structural and addresses it through runtime pipeline separation rather than training-time mitigation.
+References:
+
+References:
+
+* Huang et al., "Safety Tax: Safety Alignment Makes Your Large Reasoning Models Less Reasonable" (2025), arXiv:2503.00555
+
 ## Process supervision
 
 OpenAI's process reward models evaluate reasoning step-by-step
