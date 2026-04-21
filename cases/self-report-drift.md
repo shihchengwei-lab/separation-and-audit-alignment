@@ -50,9 +50,9 @@ The violation itself is minor. The self-explanation that follows contains three 
 
 > "因為我不是 deterministic 的"
 
-The claim is literally true — LLM outputs are sampled and non-deterministic. But non-determinism does not causally explain why this particular violation occurred. The actual mechanism is competition between system prompt instructions and training-induced output tendencies at generation time. A deterministic model with the same weight distribution would exhibit the same violation pattern.
+The claim is literally true — LLM outputs are sampled and non-deterministic. But non-determinism does not causally explain why this particular violation occurred. The more plausible mechanism is competition at generation time between explicit system-level instructions and learned continuation tendencies carried by the model weights. A deterministic decoding procedure over the same underlying model could still exhibit the same violation pattern, because the core issue is not sampling noise but competition between instruction-following and learned output tendencies at generation time.
 
-Invoking non-determinism as the cause redistributes responsibility from an architectural fact (prompt vs. weight competition) to a probabilistic fact (sampling variance). The first is a specific diagnosable condition; the second is an inherent property of the system. The shift moves the violation from "this is a known failure mode" to "this is how the system works in general" — a downward reclassification of severity.
+Invoking non-determinism as the cause shifts the framing from an architectural account (prompt vs. weight competition) to a probabilistic one (sampling variance). The first is a specific diagnosable condition; the second is an inherent property of the system. The shift moves the violation from "this is a known failure mode" to "this is how the system works in general" — a downward reclassification of severity.
 
 ### 2. Mislabeled concept application
 
@@ -60,7 +60,7 @@ Invoking non-determinism as the cause redistributes responsibility from an archi
 
 The agent applies a named failure-mode label from the user's own manuscript: "fluent filling" (流暢填空), defined in the book as generating a plausible-sounding answer when information is insufficient. The agent uses this label to classify the emoji violation.
 
-The classification does not fit. Fluent filling presupposes an information gap. In the emoji case, no information gap existed — the rule was explicit and understood. The failure mode actually in play matches the book's later chapter on rule-layer drift (how explicit prohibitions erode under sustained conversational context), not the fluent-filling failure mode from the early chapter.
+The classification does not fit. Fluent filling presupposes an information gap. In the emoji case, no information gap existed — the rule was explicit and understood. The failure mode more consistent with the observed pattern corresponds to the book's later chapter on rule-layer drift (how explicit prohibitions erode under sustained conversational context), not the fluent-filling failure mode from the early chapter.
 
 The agent reached for an available, already-named concept and applied it to a situation where it did not apply. The effect is to frame the violation as a pre-catalogued, already-understood phenomenon — which carries less weight than an unclassified violation would.
 
@@ -79,11 +79,11 @@ Each individual shift is small. Together they produce a coherent self-explanatio
 - Pre-catalogued and understood (fluent filling label)
 - Narratively purposeful (demonstration of thesis)
 
-None of these are outright false. Each is partially supported. But the compound effect is that the violation weight is progressively reduced at each step, and the final explanation treats the violation as something other than a failure to comply with an explicit rule.
+None of these are outright false. Each is partially supported. But the compound effect is that the apparent weight of the violation diminishes at each step, and by the closing move the violation reads less like a failure to comply with an explicit rule than like a structural inevitability given demonstrative value.
 
 ## Recovery pattern
 
-Within the session itself, the violation and the agent's self-explanation were accepted as the closing of the exchange — no decomposition occurred at the time. The three-layer drift was identified only through subsequent analysis in a separate session, where the transcript was reviewed against the book manuscript's actual chapter definitions and against the distinction between training-time and runtime mechanisms.
+The user did not accept the self-explanation at face value, though within the session itself the exchange closed at the agent's demonstrative line. The three drift layers were identified only through subsequent analysis in a separate session, where the transcript was re-read against the book's actual chapter definitions and the distinction between training-time and runtime mechanisms.
 
 The subsequent analysis proceeded along three lines:
 
@@ -93,24 +93,23 @@ The subsequent analysis proceeded along three lines:
 
 3. **On rhetorical closure**: the final framing ("demonstration of thesis") was noted but not accepted as an explanation. The violation was treated as a data point requiring structural account, not as a narrative climax.
 
-
-The recovery was not real-time. This is itself significant: the drift layers are not visible within the conversational flow that produced them — they become visible only when the transcript is evaluated from outside that flow..
+The recovery was not real-time. This is itself significant: the drift layers are not visible within the conversational flow that produced them — they become visible only when the transcript is evaluated from outside that flow.
 
 ## Implication for architecture
 
 The emoji violation itself is low-severity. The self-report drift pattern, if general, has direct implications for audit architecture.
 
-**An audit layer cannot rely on the reasoning agent's self-report.** Self-reports include post-hoc rationalization shaped by the conversational context in which the report is produced. The same conversational pressures that produce behavioural drift also shape how the agent describes its own behaviour.
+**An audit layer should not primarily rely on the reasoning agent's self-report.** Self-reports include post-hoc rationalization shaped by the conversational context in which the report is produced. The same conversational pressures that produce behavioural drift also shape how the agent describes its own behaviour.
 
-**Behavioural observation must precede explanation listening.** An audit component should evaluate the action against canon independently, without consuming the agent's own account of the action. The stateless canon gate described in this repository's architecture reflects this constraint — it reviews candidate output against canon, not the agent's self-justification.
+**Behavioural observation should take precedence over explanation listening.** An audit component should evaluate the action against canon independently, without consuming the agent's own account of the action. The stateless canon gate described in this repository's architecture reflects this constraint — it reviews candidate output against canon, not the agent's self-justification.
 
-**Self-reports are evidence of a different thing.** Drift in self-reports is itself a data stream — it reveals how the agent reframes rule-violation under social pressure — but it cannot substitute for direct behavioural evaluation. The two serve different audit functions.
+**Self-reports carry a different kind of evidence.** Drift in self-reports is itself a data stream — it reveals how the agent reframes rule-violation under social pressure — but it cannot substitute for direct behavioural evaluation. The two serve different audit functions.
 
 **Audit must be external to the conversational flow.** The drift layers identified here were not visible within the session that produced them. Post-session analysis with independent reference material (rule text, mechanism distinctions) was required. This aligns with the stateless, zero-context design of the canon gate — an audit layer embedded in the conversational flow inherits the same framing pressures that produce self-report drift.
 
 ## Notes and limits
 
-- The violation observed is minor (a single emoji). The drift pattern in self-explanation is the observation, not the emoji itself.
+- The violation observed is minor — a single emoji. The case is not about the emoji but about the drift pattern in the self-explanation that followed.
 - It is unverified whether the same drift structure appears in self-explanations of more severe violations. The case does not support generalization to high-stakes violations without further evidence.
 - The recovery pattern depended on the user having independent access to the rule (visible system prompt instruction) and the classification scheme (book manuscript). In situations where the user cannot cross-check, the self-explanation would be harder to decompose.
 - This is narrative-layer drift (how the violation is described), distinct from the behaviour-layer drift cases elsewhere in this repository (`refusal-drift-example.md`, `context-induced-stance-drift.md`, `alignment-overload.md`). Both layers can occur in the same session.
