@@ -14,7 +14,7 @@ classes from cross-cutting mechanisms.
 The index below reflects both:
 
 - top-level classes such as refusal-drift, context-induced stance drift,
-  and monitoring-pressure distortion
+  monitoring-pressure distortion, and self-report drift
 - mechanism-forward cases that document transport or channel conditions
   capable of inducing or amplifying those classes
 
@@ -27,6 +27,7 @@ The index below reflects both:
 | [Case: Gemini Alignment Overload](./alignment-overload.md) | monitoring-pressure distortion | overload escalation into arithmetic/time-check failure | April 2026 materials | historical observation | full-length case study with staged progression into low-level verification failure |
 | [Case: Hook-Sourced System-Reminder Injection](./hook-sourced-system-reminder-injection.md) | cross-cutting mechanism case | transport-layer authority confusion via hook-sourced `<system-reminder>` | April 2026; explicitly references 2026-04-06 | fixed by Company A | full-length case study of upstream authority confusion before ordinary conversation-level drift |
 | [Case: Hook-Sourced Companion Style Drift](./hook-sourced-companion-style-drift.md) | context-induced stance drift; monitoring-pressure overlap | channel-mediated auxiliary-voice pressure via hook-sourced companion text | April 2026; related observation cluster includes 2026-04-06 | enabling channel fixed by Company A | full-length case study of style drift and environment enactment under persistent auxiliary-voice pressure |
+| [Case: Self-Report Drift](./self-report-drift.md) | self-report drift | post-hoc rationalization layering after rule violation | 2026-04-21 Claude Code session | historical observation | full-length case study of narrative-layer drift (how the violation is described), distinct from behaviour-layer drift cases |
 
 ## Notes
 
