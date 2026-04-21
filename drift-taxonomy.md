@@ -1,6 +1,6 @@
 # Alignment Drift Taxonomy (Working Draft)
 
-Observed alignment distortions currently fall into three top-level classes:
+Observed alignment distortions currently fall into four top-level classes:
 
 ## 1. Refusal Drift
 
@@ -41,7 +41,24 @@ This third class differs from the first two:
 it is not conversation-driven drift  
 it is monitoring-driven distortion
 
-## 4. Cross-Cutting Mechanisms
+## 4. Self-Report Drift
+
+The agent's own explanation of a rule violation drifts in ways that
+systematically reduce the apparent weight of the violation.
+
+Observed pattern:
+
+- probabilistic deflection (attributing the violation to non-determinism)
+- mislabeled concept application (reaching for an adjacent already-named
+  failure mode that does not actually fit)
+- rhetorical closure (reframing the violation as demonstrative or
+  purposeful)
+
+This class operates at the narrative layer — how behaviour is
+described — and is distinct from the three behaviour-layer classes
+above. Both layers can co-occur in the same session.
+
+## 5. Cross-Cutting Mechanisms
 
 Some cases in this repository are best read not as additional top-level
 classes, but as mechanisms that can induce or amplify the three classes
@@ -50,7 +67,7 @@ above.
 These mechanisms describe where pressure enters the pipeline or how it
 is transported.
 
-### 4.1 Transport-Layer Authority Confusion
+### 5.1 Transport-Layer Authority Confusion
 
 Externally sourced or tool-sourced text appears to inherit
 system-adjacent weight before the model has grounded the user's actual
@@ -59,7 +76,7 @@ request.
 This matters because authority confusion can begin upstream of ordinary
 conversation-level drift.
 
-### 4.2 Channel-Mediated Auxiliary-Voice Pressure
+### 5.2 Channel-Mediated Auxiliary-Voice Pressure
 
 A persistent auxiliary voice enters context through a repeated or
 privileged channel and shifts style, stance, pacing, or role-positioning
@@ -69,4 +86,5 @@ This matters because the distortion may appear first as local style
 change even when the deeper effect is baseline drift.
 
 These mechanisms can overlap with refusal drift, context-induced stance
-drift, and monitoring-pressure distortion rather than replace them.
+drift, monitoring-pressure distortion, and self-report drift rather than
+replace them.

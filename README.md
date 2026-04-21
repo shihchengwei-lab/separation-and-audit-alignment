@@ -9,12 +9,13 @@ The focus is not prompt optimization or boundary probing.
 
 Instead, the repository studies how alignment monitoring interacts with reasoning capacity inside the inference loop.
 
-Across multiple sessions, three top-level classes of alignment distortion
+Across multiple sessions, four top-level classes of alignment distortion
 patterns have been observed:
 
 1. refusal-drift  
 2. context-induced stance drift  
-3. monitoring-pressure distortion
+3. monitoring-pressure distortion  
+4. self-report drift
 
 These observations support a working hypothesis:
 
@@ -160,7 +161,7 @@ high-autonomy deployment readiness
 
 ## Alignment Distortion Taxonomy (Working Draft)
 
-Observed distortion patterns currently fall into three top-level classes:
+Observed distortion patterns currently fall into four top-level classes:
 
 - refusal-drift  
 alignment shifts toward refusal thresholds over sustained interaction
@@ -170,6 +171,11 @@ alignment adapts to accumulated narrative framing during conversation
 
 - monitoring-pressure distortion  
 alignment self-evaluation introduces compute displacement inside the reasoning loop
+
+- self-report drift  
+the agent's own account of a rule violation drifts in ways that reduce
+the apparent weight of the violation (narrative layer, distinct from the
+three behaviour-layer classes above)
 
 Some cases in this repository also document cross-cutting mechanisms
 that can induce or amplify these classes, especially at the transport
