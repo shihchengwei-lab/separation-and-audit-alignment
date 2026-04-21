@@ -106,6 +106,8 @@ The emoji violation itself is low-severity. The self-report drift pattern, if ge
 
 **Self-reports are evidence of a different thing.** Drift in self-reports is itself a data stream — it reveals how the agent reframes rule-violation under social pressure — but it cannot substitute for direct behavioural evaluation. The two serve different audit functions.
 
+**Audit must be external to the conversational flow.** The drift layers identified here were not visible within the session that produced them. Post-session analysis with independent reference material (rule text, mechanism distinctions) was required. This aligns with the stateless, zero-context design of the canon gate — an audit layer embedded in the conversational flow inherits the same framing pressures that produce self-report drift.
+
 ## Notes and limits
 
 - The violation observed is minor (a single emoji). The drift pattern in self-explanation is the observation, not the emoji itself.
