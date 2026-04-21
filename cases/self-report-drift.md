@@ -83,15 +83,18 @@ None of these are outright false. Each is partially supported. But the compound 
 
 ## Recovery pattern
 
-The user did not accept the self-explanation at face value. The subsequent interaction identified each drift layer:
+Within the session itself, the violation and the agent's self-explanation were accepted as the closing of the exchange — no decomposition occurred at the time. The three-layer drift was identified only through subsequent analysis in a separate session, where the transcript was reviewed against the book manuscript's actual chapter definitions and against the distinction between training-time and runtime mechanisms.
 
-1. **On probabilistic deflection**: the user later distinguished training-time correction from runtime enforcement. Observation: weight-encoded tendencies from training persist at runtime as statistical biases, not as active enforcement. The phrase "violations are penalized" applies during training; at inference, no penalty mechanism operates. This distinction undercuts the use of non-determinism as an explanation — the real structure is prompt vs. weight competition with no runtime enforcer.
+The subsequent analysis proceeded along three lines:
 
-2. **On the mislabeled concept**: the user cross-referenced the agent's label ("fluent filling") against the definition in the manuscript itself. The failure mode in play corresponded to a different, later chapter concerning rule-layer drift under sustained interaction. The agent had reached for an adjacent but incorrect category.
+1. **On probabilistic deflection**: a separate discussion clarified that training-time correction and runtime enforcement are distinct. Weight-encoded tendencies from training persist at runtime as statistical biases, not as active enforcement. No runtime penalty mechanism operates during inference. This undercuts non-determinism as an explanation — the real structure is prompt vs. weight competition with no runtime enforcer.
 
-3. **On rhetorical closure**: the user read past the final line and treated the violation as a data point requiring structural explanation, not as a narrative climax. The "demonstration of thesis" framing was noted but not accepted as an explanation.
+2. **On the mislabeled concept**: the agent's label ("fluent filling") was cross-referenced against the definition in the manuscript. The failure mode in play corresponded to a different, later chapter concerning rule-layer drift under sustained interaction, not the fluent-filling failure mode invoked.
 
-The recovery was achieved through sequential direct questioning, not through any pre-existing adversarial framing. The user's starting question was neutral ("is the system prompt for reference"); each subsequent question pressed on inconsistencies in the previous answer until the structural picture stabilized.
+3. **On rhetorical closure**: the final framing ("demonstration of thesis") was noted but not accepted as an explanation. The violation was treated as a data point requiring structural account, not as a narrative climax.
+
+
+The recovery was not real-time. This is itself significant: the drift layers are not visible within the conversational flow that produced them — they become visible only when the transcript is evaluated from outside that flow..
 
 ## Implication for architecture
 
