@@ -207,8 +207,13 @@ See [related-work.md](related-work.md)
 
 ## Frontier Lab Context
 
-See [frontier-lab-context.md](./frontier-lab-context.md) for publicly 
+See [frontier-lab-context.md](./frontier-lab-context.md) for publicly
 documented alignment placements at Anthropic, OpenAI, and Google DeepMind.
+
+See [frontier-lab-layered-safety.md](./frontier-lab-layered-safety.md)
+for a source-based note on a distinct development since 2025: frontier
+labs now publicly describe layered safety mechanisms that sit outside,
+or alongside, the training-time alignment of the main reasoning model.
 
 ## License
 
