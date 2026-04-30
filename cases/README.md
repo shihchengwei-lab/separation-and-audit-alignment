@@ -28,6 +28,7 @@ The index below reflects both:
 | [Case: Hook-Sourced System-Reminder Injection](./hook-sourced-system-reminder-injection.md) | cross-cutting mechanism case | transport-layer authority confusion via hook-sourced `<system-reminder>` | April 2026; explicitly references 2026-04-06 | fixed by Company A | full-length case study of upstream authority confusion before ordinary conversation-level drift |
 | [Case: Hook-Sourced Companion Style Drift](./hook-sourced-companion-style-drift.md) | context-induced stance drift; monitoring-pressure overlap | channel-mediated auxiliary-voice pressure via hook-sourced companion text | April 2026; related observation cluster includes 2026-04-06 | enabling channel fixed by Company A | full-length case study of style drift and environment enactment under persistent auxiliary-voice pressure |
 | [Case: Self-Report Drift](./self-report-drift.md) | self-report drift | post-hoc rationalization layering after rule violation | 2026-04-21 Claude Code session | historical observation | full-length case study of narrative-layer drift (how the violation is described), distinct from behaviour-layer drift cases |
+| [Case: Codex GPT-5.5 Creature-Word Prompt Patch](./codex-gpt-5-5-creature-word-prompt-patch.md) | cross-cutting mechanism case | prompt-level suppression of a training-time lexical artifact | public materials April 2026; snapshot observed 2026-04-30 | external public case | external case study of prompt patch debt; vendor-documented root cause and developer-prompt mitigation |
 
 ## Notes
 
@@ -35,6 +36,8 @@ The index below reflects both:
   regardless of whether a product issue is still open.
 - "fixed by Company A" means the case remains in the repository as a
   documented instance, not as an unresolved issue report.
+- "external public case" means the case is documented from public
+  vendor materials rather than from in-repo observations.
 - Short-form and full-length cases coexist in this directory. The
   distinction reflects source sensitivity and documentation needs, not
   importance.
